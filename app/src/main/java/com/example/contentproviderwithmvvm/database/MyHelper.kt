@@ -4,8 +4,8 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
-class MyHelper(context: Context)
-    : SQLiteOpenHelper(context, "MySQL", null,1){
+class MyHelper(context: Context) : SQLiteOpenHelper(
+    context, "MySQL", null,1){
 
     override fun onCreate(db: SQLiteDatabase?) {
         val query =

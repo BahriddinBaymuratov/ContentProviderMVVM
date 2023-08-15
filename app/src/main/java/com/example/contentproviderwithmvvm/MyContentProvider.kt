@@ -9,7 +9,7 @@ import com.example.contentproviderwithmvvm.database.MyHelper
 
 class MyContentProvider : ContentProvider() {
     companion object {
-        private const val PROVIDER_NAME = "com.example.contentproviderwithmvvm/MyContentProvider"
+        private const val PROVIDER_NAME = "com.example.contentproviderwithmvvm/MyCo ntentProvider"
         val URL = "content://$PROVIDER_NAME/MY_TABLE"
         val CONTENT_URI = Uri.parse(URL)
 
@@ -19,6 +19,7 @@ class MyContentProvider : ContentProvider() {
     }
 
     private var db: SQLiteDatabase? = null
+
     override fun onCreate(): Boolean {
         val helper = MyHelper(context!!)
         db = helper.writableDatabase
